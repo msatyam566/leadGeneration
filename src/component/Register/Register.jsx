@@ -58,15 +58,17 @@ const Register = () => {
                 username: formData.username,
                 password: formData.password
             });
-            setMessage('Registration successful! Redirecting to login...');
-            setError('');
-            setTimeout(() => {
-                navigate('/login');  // Redirect to login page after successful registration
-            }, 2000); // Adjust delay as needed
+            if(response){
+                setMessage('Registration successful! Redirecting to login...');
+                setError('');
+                setTimeout(() => {
+                    navigate('/login');  // Redirect to login page after successful registration
+                }, 2000); // Adjust delay as needed
+            }
+       
         } catch (error) {
             console.error(error);
             setError('Failed to register. Please try again.');
-            setMessage('');
         }
     };
 
