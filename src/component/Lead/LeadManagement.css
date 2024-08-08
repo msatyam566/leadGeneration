@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.lead-management-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.lead-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.lead-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.lead-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.lead-form button:hover {
+    background-color: #218838;
+}
+
+.lead-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1%;
+}
+
+.lead-table th,
+.lead-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.lead-table th {
+    background-color: #f8f8f8;
+}
+
+.lead-table td button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.lead-table td button:hover {
+    background-color: #0056b3;
+}
+
+.lead-table td button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.lead-table td button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* LeadManagement.css */
+.message {
+    position: fixed; /* Fixed positioning to stay in place */
+    right: 20px; /* Position from the right edge */
+    top: 20px; /* Position from the top edge */
+    padding: 15px; /* Increase padding for a larger look */
+    margin: 0; /* Remove default margins */
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: center; /* Center text inside the message */
+    z-index: 1000; /* Ensure the message is above other content */
+    max-width: 400px; /* Increased width for a larger message box */
+    font-size: 16px; /* Larger font size for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for a subtle 3D effect */
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .lead-form {
+        padding: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input,
+    .form-row select {
+        min-width: 100%;
+    }
+
+    .lead-table th,
+    .lead-table td {
+        padding: 5px;
+    }
+}
